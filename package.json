@@ -1,0 +1,14 @@
+{
+    "name"         : "node-red-contrib-mpr121",
+    "version"      : "0.1.0",
+    "description"  : "Node for interacting with MPR121",
+    "dependencies": {
+    	"mpr121.js" :">=0.1.0"
+    },
+    "keywords": [ "node-red" ],
+    "node-red"     : {
+        "nodes": {
+            "mpr121-interrupt": "mpr121/mpr121.js"
+        }
+    }
+}

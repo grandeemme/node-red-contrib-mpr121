@@ -1,0 +1,29 @@
+<script type="text/javascript">
+	RED.nodes.registerType('mpr121-interrupt', {
+		category : 'input',
+		color : '#a6bbcf',
+		defaults : {
+			name : {
+				value : ""
+			}
+		},
+		inputs : 0,
+		outputs : 1,
+		icon : "file.png",
+		label : function() {
+			return this.name || "mpr121-interrupt";
+		}
+	});
+</script>
+
+<script type="text/x-red" data-template-name="lower-case">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+  		<input type="text" id="mpr121-gpio" placeholder="Gpio">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="lower-case">
+    <p>A simple node that use MPR121</p>
+</script>
