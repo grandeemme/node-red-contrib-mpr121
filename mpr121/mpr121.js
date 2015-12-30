@@ -1,6 +1,9 @@
-var Mpr121 = require('mpr121.js');
+
 
 module.exports = function(RED) {
+	var Mpr121 = require('mpr121.js');
+	
+	
 	function Mpr121InterruptNode(config) {
 		RED.nodes.createNode(this, config);
 		var node = this;
