@@ -1,9 +1,7 @@
 
-
 module.exports = function(RED) {
 	var Mpr121 = require('mpr121.js');
-	
-	
+
 	function Mpr121InterruptNode(config) {
 		RED.nodes.createNode(this, config);
 		var node = this;
@@ -25,7 +23,7 @@ module.exports = function(RED) {
 			node.send(msg);
 		}
 
-		mod.startInterrupt(4);
+		mod.startInterrupt(config.gpio);
 	}
 	RED.nodes.registerType("mpr121-interrupt", Mpr121InterruptNode);
 }

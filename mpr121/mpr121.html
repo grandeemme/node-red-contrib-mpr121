@@ -5,22 +5,22 @@
 		defaults : {
 			name : {
 				value : ""
+
+			},
+			gpio : {
+				value : 4
 			}
 		},
 		inputs : 0,
 		outputs : 1,
-		icon : "file.png",
-		label : function() {
-			return this.name || "mpr121-interrupt";
-		}
+		label : "mpr121-interrupt"
 	});
 </script>
 
 <script type="text/x-red" data-template-name="lower-case">
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
-  		<input type="text" id="mpr121-gpio" placeholder="Gpio">
+        <label for="node-input-gpio"><i class="icon-tag"></i> Gpio for interrupt</label>
+  		<input type="text" id="node-input-gpio" placeholder="gpio">
     </div>
 </script>
 
