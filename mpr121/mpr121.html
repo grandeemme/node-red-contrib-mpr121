@@ -1,5 +1,5 @@
 <script type="text/javascript">
-	RED.nodes.registerType('mpr121-interrupt', {
+	RED.nodes.registerType('mpr121', {
 		category : 'input',
 		color : '#a6bbcf',
 		defaults : {
@@ -13,18 +13,18 @@
 		},
 		inputs : 0,
 		outputs : 1,
-		icon :"serial.png"
+		icon :"serial.png",
 		label : "mpr121"
 	});
 </script>
 
-<script type="text/x-red" data-template-name="mpr121-interrupt">
+<script type="text/x-red" data-template-name="mpr121">
     <div class="form-row">
         <label for="node-input-gpio"><i class="icon-tag"></i> Gpio for interrupt</label>
   		<input type="text" id="node-input-gpio" placeholder="gpio">
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="mpr121-interrupt">
+<script type="text/x-red" data-help-name="mpr121">
     <p>A simple node that use MPR121</p>
 </script>

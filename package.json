@@ -8,7 +8,7 @@
     "keywords": [ "node-red" ],
     "node-red"     : {
         "nodes": {
-            "mpr121-interrupt": "mpr121/mpr121.js"
+            "mpr121": "mpr121/mpr121.js"
         }
     }
 }

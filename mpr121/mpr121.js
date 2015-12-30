@@ -11,7 +11,7 @@ module.exports = function(RED) {
 		// Address, I2c Bus, Gipio interrupt
 		this.mod = new Mpr121(0x5A, 1);
 
-		mod.notifyTouch = function(pin) {
+		this.mod.notifyTouch = function(pin) {
 			var msg = {
 				payload : pin
 			}
@@ -19,7 +19,7 @@ module.exports = function(RED) {
 			node.send(msg);
 		}
 
-		mod.notifyRelease = function(pin) {
+		this.mod.notifyRelease = function(pin) {
 			var msg = {
 				payload : pin
 			}
@@ -27,9 +27,9 @@ module.exports = function(RED) {
 			node.send(msg);
 		}
 
-		mod.startInterrupt(config.gpio);
+		this.mod.startInterrupt(config.gpio);
 		
 		this.status({fill:"green",shape:"dot",text:"connected"});
 	}
-	RED.nodes.registerType("mpr121-interrupt", Mpr121InterruptNode);
+	RED.nodes.registerType("mpr121", Mpr121InterruptNode);
 }
