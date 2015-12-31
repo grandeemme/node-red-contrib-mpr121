@@ -1,0 +1,47 @@
+<script type="text/javascript">
+	RED.nodes.registerType('mpr121-i', {
+		category : 'input',
+		color : '#a6bbcf',
+		defaults : {
+			name : {
+				value : ""
+			},
+			gpio : {
+				value : 4
+			},
+			address : {
+				value : 0x5A
+			},
+			i2cbus : {
+				value : 1
+			}
+		},
+		inputs : 0,
+		outputs : 12,
+		icon : "serial.png",
+		label : "mpr121-i"
+	});
+</script>
+
+<script type="text/x-red" data-template-name="mpr121-i">
+ 	<div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i>Name</label>
+  		<input type="text" id="node-input-name" placeholder="name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-gpio"><i class="icon-tag"></i> Gpio for interrupt</label>
+  		<input type="text" id="node-input-gpio" placeholder="gpio">
+    </div>
+	<div class="form-row">
+        <label for="node-input-address"><i class="icon-tag"></i>Address</label>
+  		<input type="text" id="node-input-address" placeholder="address">
+    </div>
+	<div class="form-row">
+        <label for="node-input-i2cbus"><i class="icon-tag"></i>I2c Bus</label>
+  		<input type="text" id="node-input-i2cbus" placeholder="i2cbus">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="mpr121-i">
+    <p><b>MPR121</b> interrupt driven node</p>
+</script>
