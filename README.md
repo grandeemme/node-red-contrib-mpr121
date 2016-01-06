@@ -41,6 +41,7 @@ var msg = {
 
 ###Usage
 Add the node like this
+
 ![mpr121-i](https://raw.githubusercontent.com/grandeemme/node-red-contrib-mpr121/master/readme/mpr121-i.png)
 
 ##Polling
@@ -83,4 +84,5 @@ var msg = {
 ```
 ###Usage
 Add the node like this
+
 ![mpr121-i](https://raw.githubusercontent.com/grandeemme/node-red-contrib-mpr121/master/readme/mpr121-p.png)
