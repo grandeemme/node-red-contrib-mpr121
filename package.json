@@ -1,15 +1,30 @@
 {
     "name"         : "node-red-contrib-mpr121",
-    "version"      : "0.1.0",
+    "version"      : "1.0.0",
     "description"  : "Node for interacting with MPR121",
     "dependencies": {
-    	"mpr121.js" :">=0.1.0"
+    	"mpr121.js" :">=1.0.0"
     },
-    "keywords": [ "node-red" ],
+    "keywords": [ "node-red",
+      "mpr121",
+      "onoff",
+      "i2c-bus",
+      "gpio",
+      "raspberry",
+      "pi",
+      "raspberrypi"
+     ],
     "node-red"     : {
         "nodes": {
             "mpr121-i": "mpr121-i/mpr121-i.js",
              "mpr121-p": "mpr121-p/mpr121-p.js"
         }
-    }
+    },
+     "repository": {
+        "type": "git",
+        "url": "https://github.com/grandeemme/node-red-contrib-mpr121.git"
+      },
+    "author": "Mauro Miranda",
+    "contributors": [ ],
+    "license": "MIT"
 }
