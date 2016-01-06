@@ -7,7 +7,7 @@ The package provide two different node:
 
 ##Install
 ```
-npm istall node-red-contrib-mpr121
+npm install node-red-contrib-mpr121
 ```
 
 ##Interrupt
