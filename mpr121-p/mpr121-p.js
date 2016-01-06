@@ -44,7 +44,7 @@ module.exports = function(RED) {
 			values.forEach(function(element, index, array) {
 				var msg = {
 					payload : {
-						type : "polling",
+						type : "value",
 						pin : element
 					}
 				}
