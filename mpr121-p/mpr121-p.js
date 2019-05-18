@@ -12,14 +12,15 @@ module.exports = function(RED) {
 		});
 
 		// Address, I2c Bus, Gipio interrupt
-		this.mod = new Mpr121(config.address, config.i2cbus);
+		this.mod = new Mpr121(parseInt(config.address), config.i2cbus);
 
 		this.mod.onTouch = function(pin) {
 			var msg = {
-				payload : {
-					type : "touch",
-					pin : pin
-				}
+				payload : 1 ,
+				action : "touch",
+				pin : pin,
+				address : parseInt(config.address),
+				i2cbus : parseInt(config.i2cbus)
 			}
 			var msgs = new Array(12);
 			msgs[pin] = msg;
@@ -28,16 +29,17 @@ module.exports = function(RED) {
 
 		this.mod.onRelease = function(pin) {
 			var msg = {
-				payload : {
-					type : "release",
-					pin : pin
-				}
+				payload : 0 ,
+				action : "release",
+				pin : pin,
+				address : parseInt(config.address),
+				i2cbus : parseInt(config.i2cbus)
 			}
 			var msgs = new Array(12);
 			msgs[pin] = msg;
 			node.send(msgs);
 		}
-
+/*	// disabled for spamming of outputs
 		this.mod.onRead = function(values) {
 			var msgs = new Array(12);
 
@@ -53,7 +55,7 @@ module.exports = function(RED) {
 
 			node.send(msgs);
 		}
-
+*/
 		this.on('close', function() {
 			node.mod.stopPolling();
 		});
