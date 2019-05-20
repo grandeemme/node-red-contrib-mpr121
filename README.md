@@ -22,21 +22,23 @@ The payload contains two values:
 Message for touch event
 ```javascript
 var msg = {
-  payload : {
-    type : "touch",
-    pin : pin
-  }
-}
+				payload : 1 ,
+				action : "touch",
+				pin : pin,
+				address : parseInt(config.address),
+				i2cbus : parseInt(config.i2cbus)
+			}
 ```
 
 Message for release event
 ```javascript
 var msg = {
-  payload : {
-    type : "release",
-    pin : pin
-  }
-}
+				payload : 0 ,
+				action : "release",
+				pin : pin,
+				address : parseInt(config.address),
+				i2cbus : parseInt(config.i2cbus)
+			}
 ```
 
 ###Usage
@@ -56,32 +58,25 @@ The payload contains two values:
 Message for touch event
 ```javascript
 var msg = {
-  payload : {
-    type : "touch",
-    pin : pin
-  }
-}
+				payload : 1 ,
+				action : "touch",
+				pin : pin,
+				address : parseInt(config.address),
+				i2cbus : parseInt(config.i2cbus)
+			}
 ```
 
 Message for release event
 ```javascript
 var msg = {
-  payload : {
-    type : "release",
-    pin : pin
-  }
-}
+				payload : 0 ,
+				action : "release",
+				pin : pin,
+				address : parseInt(config.address),
+				i2cbus : parseInt(config.i2cbus)
+			}
 ```
 
-Message for value event
-```javascript
-var msg = {
-  payload : {
-    type : "value",
-    pin : element
-  }
-}
-```
 ###Usage
 Add the node like this
 
