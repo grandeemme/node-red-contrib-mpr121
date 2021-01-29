@@ -22,23 +22,23 @@ The payload contains two values:
 Message for touch event
 ```javascript
 var msg = {
-				payload : 1 ,
-				action : "touch",
-				pin : pin,
-				address : parseInt(config.address),
-				i2cbus : parseInt(config.i2cbus)
-			}
+	payload : 1 ,
+	action : "touch",
+	pin : pin,
+	address : parseInt(config.address),
+	i2cbus : parseInt(config.i2cbus)
+}
 ```
 
 Message for release event
 ```javascript
 var msg = {
-				payload : 0 ,
-				action : "release",
-				pin : pin,
-				address : parseInt(config.address),
-				i2cbus : parseInt(config.i2cbus)
-			}
+	payload : 0 ,
+	action : "release",
+	pin : pin,
+	address : parseInt(config.address),
+	i2cbus : parseInt(config.i2cbus)
+}
 ```
 
 ###Usage
@@ -58,23 +58,23 @@ The payload contains two values:
 Message for touch event
 ```javascript
 var msg = {
-				payload : 1 ,
-				action : "touch",
-				pin : pin,
-				address : parseInt(config.address),
-				i2cbus : parseInt(config.i2cbus)
-			}
+	payload : 1 ,
+	action : "touch",
+	pin : pin,
+	address : parseInt(config.address),
+	i2cbus : parseInt(config.i2cbus)
+}
 ```
 
 Message for release event
 ```javascript
 var msg = {
-				payload : 0 ,
-				action : "release",
-				pin : pin,
-				address : parseInt(config.address),
-				i2cbus : parseInt(config.i2cbus)
-			}
+	payload : 0 ,
+	action : "release",
+	pin : pin,
+	address : parseInt(config.address),
+	i2cbus : parseInt(config.i2cbus)
+}
 ```
 
 ###Usage
